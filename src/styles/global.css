@@ -1,0 +1,66 @@
+/* Global Styles */
+:root {
+    --color-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-accent: #333333;
+    --color-border: #eaeaea;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --spacing-unit: 1rem;
+    --max-width: 800px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-inline-size: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-block-end: var(--spacing-unit);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+p {
+    margin-block-end: var(--spacing-unit);
+    color: #4a4a4a;
+}
+
+
+/* Utilities */
+.fade-in {
+    animation: fadeIn 1s linear(0, 0.009, 0.035 2.1%, 0.141 4.4%, 0.723 12.9%, 0.938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%, 0.975 57.1%, 0.997 69.8%, 1.003 76.9%, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

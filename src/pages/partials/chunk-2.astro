@@ -1,0 +1,23 @@
+<div class="card fade-in">
+  <h2>Chunk 2 Loaded</h2>
+  <p>
+    This content was loaded dynamically from <code>/partials/chunk-2</code>.
+  </p>
+  <p>Dynamic loading chain complete.</p>
+</div>
+
+<style is:inline>
+  @scope to (* > :not(p, h2)) {
+    :scope {
+      border: 1px solid var(--color-border);
+      padding: calc(var(--spacing-unit) * 2);
+      border-radius: 8px;
+      margin-block-start: var(--spacing-unit);
+    }
+
+    p,
+    h2 {
+      color: blue;
+    }
+  }
+</style>

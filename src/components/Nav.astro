@@ -1,0 +1,37 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/page-2">Page 2</a></li>
+        <li><a href="/page-3">Page 3</a></li>
+    </ul>
+    <style is:inline>
+        @scope {
+            :scope {
+                padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+                border-bottom: 1px solid var(--color-border);
+                display: flex;
+                justify-content: center;
+            }
+
+            :scope ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                gap: calc(var(--spacing-unit) * 2);
+            }
+
+            :scope a {
+                text-decoration: none;
+                color: var(--color-text);
+                font-weight: 500;
+                font-size: 0.95rem;
+                transition: color 0.2s ease;
+            }
+
+            :scope a:hover {
+                color: #888;
+            }
+        }
+    </style>
+</nav>

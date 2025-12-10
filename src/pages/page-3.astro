@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Page 3">
+	<div class="fade-in">
+		<h1>Page 3</h1>
+		<p>This is another static page.</p>
+		<div class="card">
+			<h3>Clean Design</h3>
+			<p>Notice the whitespace and typography.</p>
+		</div>
+	</div>
+
+	<style is:inline>
+		@scope {
+			h1,
+			p {
+				color: blue;
+			}
+		}
+	</style>
+</Layout>

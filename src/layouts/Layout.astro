@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<script>
+			import "htmx.org";
+		</script>
+	</head>
+	<body>
+		<Nav />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

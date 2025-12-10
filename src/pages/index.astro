@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Home">
+	<div class="fade-in">
+		<div class="example-component">
+			<h2>Dynamic Loading Demo</h2>
+			<p>
+				Click the button below to load the first chunk of HTML
+				dynamically.
+			</p>
+
+			<div style="margin-top: 2rem;">
+				<Button
+					hx-get="/partials/chunk-1"
+					hx-target="#chunk-1-container"
+					hx-swap="innerHTML"
+				>
+					Load Chunk 1
+				</Button>
+			</div>
+			<style is:inline>
+				@scope to (* > :not(p, h2)) {
+					p,
+					h2 {
+						color: red;
+					}
+				}
+			</style>
+
+			<div id="chunk-1-container" style="margin-top: 2rem;"></div>
+		</div>
+
+		<p>Outside of the scope</p>
+	</div>
+</Layout>
