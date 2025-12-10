@@ -1,5 +1,6 @@
 ---
 import Button from "../../components/Button.astro";
+export const partial = true;
 ---
 
 <div class="card fade-in">
@@ -21,20 +22,20 @@ import Button from "../../components/Button.astro";
   <p>Inside the scope</p>
 
   <div id="chunk-2-container" style="margin-top: 1rem;"></div>
+
+  <style is:inline>
+    @scope to (* > :not(p, h2)) {
+      :scope {
+        border: 1px solid var(--color-border);
+        padding: calc(var(--spacing-unit) * 2);
+        border-radius: 8px;
+        margin-block-start: var(--spacing-unit);
+      }
+  
+      p,
+      h2 {
+        color: green;
+      }
+    }
+  </style>
 </div>
-
-<style is:inline>
-  @scope to (* > :not(p, h2)) {
-    :scope {
-      border: 1px solid var(--color-border);
-      padding: calc(var(--spacing-unit) * 2);
-      border-radius: 8px;
-      margin-block-start: var(--spacing-unit);
-    }
-
-    p,
-    h2 {
-      color: green;
-    }
-  }
-</style>
